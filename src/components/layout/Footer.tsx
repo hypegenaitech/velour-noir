@@ -1,8 +1,23 @@
 import Link from 'next/link';
 
 const SHOP = ['New Arrivals', 'Face', 'Eyes', 'Lips', 'Cheek', 'Skincare', 'Kits', 'Bestsellers', 'Gift Cards'];
-const HELP = ['Contact Us', 'FAQ', 'Shipping & Delivery', 'Returns & Exchanges', 'Track My Order', 'Store Locator'];
-const ABOUT = ['Our Story', 'Careers', 'Press', 'Partners', 'Sustainability', 'Terms', 'Privacy Policy'];
+const HELP: { label: string; href: string }[] = [
+  { label: 'Contact Us', href: '/contact' },
+  { label: 'FAQ', href: '/faq' },
+  { label: 'Shipping & Delivery', href: '/shipping' },
+  { label: 'Returns & Exchanges', href: '/returns' },
+  { label: 'Track My Order', href: '/account' },
+  { label: 'Store Locator', href: '/contact' },
+];
+const ABOUT: { label: string; href: string }[] = [
+  { label: 'Our Story', href: '/about' },
+  { label: 'Careers', href: '/contact' },
+  { label: 'Press', href: '/contact' },
+  { label: 'Partners', href: '/contact' },
+  { label: 'Sustainability', href: '/about' },
+  { label: 'Terms', href: '/terms' },
+  { label: 'Privacy Policy', href: '/privacy' },
+];
 const SOCIALS = ['IG', 'TK', 'YT', 'PT'];
 
 export default function Footer() {
@@ -35,8 +50,8 @@ export default function Footer() {
             <p className="font-jost text-[11px] uppercase tracking-[0.2em] text-gold mb-5">HELP</p>
             <ul className="space-y-2">
               {HELP.map((item) => (
-                <li key={item}>
-                  <Link href="#" className="font-jost text-[12px] text-muted hover:text-platinum transition-colors">{item}</Link>
+                <li key={item.label}>
+                  <Link href={item.href} className="font-jost text-[12px] text-muted hover:text-platinum transition-colors">{item.label}</Link>
                 </li>
               ))}
             </ul>
@@ -45,8 +60,8 @@ export default function Footer() {
             <p className="font-jost text-[11px] uppercase tracking-[0.2em] text-gold mb-5">ABOUT</p>
             <ul className="space-y-2">
               {ABOUT.map((item) => (
-                <li key={item}>
-                  <Link href="#" className="font-jost text-[12px] text-muted hover:text-platinum transition-colors">{item}</Link>
+                <li key={item.label}>
+                  <Link href={item.href} className="font-jost text-[12px] text-muted hover:text-platinum transition-colors">{item.label}</Link>
                 </li>
               ))}
             </ul>
