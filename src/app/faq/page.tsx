@@ -82,7 +82,7 @@ export default function FAQPage() {
         ))}
 
         <div className="mt-10 border border-gold/20 p-8 text-center">
-          <p className="font-jost text-[13px] text-muted mb-4">Can't find what you're looking for?</p>
+          <p className="font-jost text-[13px] text-muted mb-4">Can&apos;t find what you&apos;re looking for?</p>
           <a href="/contact" className="font-jost text-[11px] uppercase tracking-[0.2em] text-gold border border-gold/50 px-8 py-3 hover:bg-gold/10 transition-colors inline-block">
             CONTACT US
           </a>

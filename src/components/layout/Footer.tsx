@@ -27,7 +27,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           <div>
             <p className="font-cormorant text-[20px] tracking-[0.4em] text-white uppercase mb-3">VELOUR NOIR</p>
-            <p className="font-cormorant italic text-muted text-sm mb-6">"Defiantly Beautiful. Unapologetically You."</p>
+            <p className="font-cormorant italic text-muted text-sm mb-6">&quot;Defiantly Beautiful. Unapologetically You.&quot;</p>
             <div className="flex items-center gap-4">
               {SOCIALS.map((s) => (
                 <button key={s} className="font-jost text-[11px] uppercase tracking-wider text-muted hover:text-gold transition-colors border border-muted/20 w-8 h-8 flex items-center justify-center hover:border-gold">

@@ -140,7 +140,6 @@ export default function ParticleField() {
     let frameId: number;
 
     const pos = geometry.attributes.position as THREE.BufferAttribute;
-    const halfW = (W / 2) * scale;
     const halfH = (H / 2) * scale;
 
     const animate = () => {

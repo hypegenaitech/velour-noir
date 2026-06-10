@@ -1,6 +1,6 @@
 'use client';
 import React, { createContext, useContext, useReducer, useEffect } from 'react';
-import { CartState, CartAction, CartItem, Product, Shade } from '@/types';
+import { CartState, CartAction } from '@/types';
 
 const DISCOUNT_CODES: Record<string, number> = { VELOUR20: 20 };
 

@@ -9,7 +9,7 @@ export default function BrandStatement() {
           className="font-cormorant italic font-light text-white leading-tight mb-8"
           style={{ fontSize: 'clamp(32px,6vw,72px)' }}
         >
-          "Beauty is not a standard.<br />It is a declaration."
+          &quot;Beauty is not a standard.<br />It is a declaration.&quot;
         </blockquote>
         <p className="font-jost text-[11px] uppercase tracking-[0.3em] text-gold">
           VELOUR NOIR — SINCE 2024

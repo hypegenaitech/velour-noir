@@ -1,6 +1,6 @@
 'use client';
 import { useState } from 'react';
-import { User, Package, Heart, MapPin, CreditCard, LogOut, ChevronRight } from 'lucide-react';
+import { Package, Heart, MapPin, CreditCard, LogOut, ChevronRight } from 'lucide-react';
 import Link from 'next/link';
 
 const TABS = ['OVERVIEW', 'ORDERS', 'ADDRESSES', 'PAYMENT', 'SETTINGS'] as const;
@@ -14,8 +14,6 @@ const MOCK_ORDERS = [
 
 export default function AccountPage() {
   const [tab, setTab] = useState<Tab>('OVERVIEW');
-  const [isLoggedIn] = useState(true); // demo: always logged in
-
   const formatPrice = (n: number) =>
     new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(n);
 

@@ -22,7 +22,7 @@ export default function EditorialStory() {
             VELOUR NOIR was born from a single brushstroke on a darkened runway. What began as a vision — makeup as armor, beauty as rebellion — became a movement that redefined what luxury cosmetics could be.
           </p>
           <p className="font-jost text-[14px] text-muted leading-relaxed mb-8">
-            Every formula, every shade, every limited edition collection is built on a foundation of artistic obsession and scientific precision. We don't follow trends. We create them — one editorial moment at a time.
+            Every formula, every shade, every limited edition collection is built on a foundation of artistic obsession and scientific precision. We don&apos;t follow trends. We create them — one editorial moment at a time.
           </p>
           <Link href="/about" className="font-jost text-[11px] uppercase tracking-[0.2em] text-gold underline hover:text-gold-light transition-colors">
             READ THE STORY
