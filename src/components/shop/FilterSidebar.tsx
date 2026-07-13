@@ -20,7 +20,7 @@ export default function FilterSidebar({ active, onChange }: Props) {
     setOpen((prev) => prev.includes(label) ? prev.filter((l) => l !== label) : [...prev, label]);
 
   return (
-    <aside className="w-60 flex-shrink-0 border-r border-gold/20 pr-6">
+    <aside className="w-full lg:w-60 flex-shrink-0 border-b lg:border-b-0 lg:border-r border-gold/20 pb-2 mb-6 lg:pb-0 lg:mb-0 lg:pr-6">
       {FILTERS.map((f) => (
         <div key={f.label} className="border-b border-gold/10 py-4">
           <button

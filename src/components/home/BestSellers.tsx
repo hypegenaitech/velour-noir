@@ -6,7 +6,7 @@ export default function BestSellers() {
   const products = getFeaturedProducts();
 
   return (
-    <section className="bg-black py-24 px-8">
+    <section className="bg-black py-24 px-4 md:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-14">
           <h2 className="font-cormorant text-[48px] text-white uppercase tracking-[0.1em] font-light">BESTSELLERS</h2>

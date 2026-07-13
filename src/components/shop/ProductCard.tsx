@@ -83,7 +83,7 @@ export default function ProductCard({ product }: Props) {
       </Link>
 
       {/* Add to bag */}
-      <div className={cn('overflow-hidden transition-all duration-300', hovered ? 'max-h-14' : 'max-h-0')}>
+      <div className={cn('overflow-hidden transition-all duration-300', 'max-h-14 lg:max-h-0', hovered && 'lg:max-h-14')}>
         <button
           ref={btnRef}
           onClick={handleAddToCart}

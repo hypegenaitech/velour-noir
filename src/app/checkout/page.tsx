@@ -44,12 +44,12 @@ export default function CheckoutPage() {
   return (
     <div className="min-h-screen bg-black">
       {/* Minimal header */}
-      <div className="flex items-center justify-center h-20 border-b border-gold/20">
-        <Link href="/" className="font-cormorant text-[20px] tracking-[0.4em] text-white uppercase">VELOUR NOIR</Link>
+      <div className="flex items-center justify-center h-20 border-b border-gold/20 px-4">
+        <Link href="/" className="font-cormorant text-[16px] tracking-[0.2em] sm:text-[20px] sm:tracking-[0.4em] text-white uppercase whitespace-nowrap">VELOUR NOIR</Link>
       </div>
 
       {/* Progress */}
-      <div className="flex items-center justify-center gap-0 py-8 border-b border-gold/10">
+      <div className="flex items-center justify-center gap-0 py-6 md:py-8 border-b border-gold/10 px-2">
         {STEPS.map((s, i) => (
           <div key={s} className="flex items-center">
             <button
@@ -58,12 +58,12 @@ export default function CheckoutPage() {
                 i === step ? 'text-gold' : i < step ? 'text-muted hover:text-platinum' : 'text-muted/40'
               }`}
             >
-              <span className={`w-6 h-6 rounded-full flex items-center justify-center text-[10px] border ${
+              <span className={`w-6 h-6 rounded-full flex items-center justify-center text-[10px] border flex-shrink-0 ${
                 i === step ? 'border-gold text-gold' : i < step ? 'border-gold/50 bg-gold/20 text-gold' : 'border-muted/30 text-muted/40'
               }`}>{i + 1}</span>
-              {s}
+              <span className="hidden sm:inline">{s}</span>
             </button>
-            {i < STEPS.length - 1 && <ChevronRight size={10} className="text-muted/30 mx-2 md:mx-4" />}
+            {i < STEPS.length - 1 && <ChevronRight size={10} className="text-muted/30 mx-1.5 md:mx-4 flex-shrink-0" />}
           </div>
         ))}
       </div>
@@ -72,7 +72,7 @@ export default function CheckoutPage() {
         {/* Form */}
         <div className="space-y-8">
           {step === 0 && (
-            <div className="border border-gold/20 p-8">
+            <div className="border border-gold/20 p-5 sm:p-8">
               <h2 className="font-cormorant text-[28px] text-white uppercase tracking-[0.05em] mb-6">CONTACT INFORMATION</h2>
               <div className="grid grid-cols-2 gap-4">
                 <Input placeholder="EMAIL ADDRESS" aria-label="Email address" value={form.email} onChange={set('email')} type="email" className="col-span-2" />
@@ -82,9 +82,9 @@ export default function CheckoutPage() {
           )}
 
           {step === 1 && (
-            <div className="border border-gold/20 p-8 space-y-6">
+            <div className="border border-gold/20 p-5 sm:p-8 space-y-6">
               <h2 className="font-cormorant text-[28px] text-white uppercase tracking-[0.05em]">SHIPPING ADDRESS</h2>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <Input placeholder="FIRST NAME" aria-label="First name" value={form.firstName} onChange={set('firstName')} />
                 <Input placeholder="LAST NAME" aria-label="Last name" value={form.lastName} onChange={set('lastName')} />
                 <Input placeholder="ADDRESS LINE 1" aria-label="Address line 1" value={form.address} onChange={set('address')} className="col-span-2" />
@@ -119,7 +119,7 @@ export default function CheckoutPage() {
           )}
 
           {step === 2 && (
-            <div className="border border-gold/20 p-8 space-y-6">
+            <div className="border border-gold/20 p-5 sm:p-8 space-y-6">
               <div className="flex items-center justify-between">
                 <h2 className="font-cormorant text-[28px] text-white uppercase tracking-[0.05em]">PAYMENT</h2>
                 <div className="flex items-center gap-2 text-muted">
@@ -153,7 +153,7 @@ export default function CheckoutPage() {
         </div>
 
         {/* Order summary */}
-        <div className="lg:sticky lg:top-8 self-start border border-gold/20 p-8">
+        <div className="lg:sticky lg:top-8 self-start border border-gold/20 p-5 sm:p-8">
           <h2 className="font-cormorant text-[22px] text-white uppercase tracking-[0.05em] mb-6">ORDER SUMMARY</h2>
           <div className="space-y-4 mb-8">
             {mounted && state.items.slice(0, 3).map((item, i) => (

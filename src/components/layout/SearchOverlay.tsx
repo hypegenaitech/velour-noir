@@ -35,7 +35,7 @@ export default function SearchOverlay() {
     <AnimatePresence>
       {searchOpen && (
         <motion.div
-          className="fixed inset-0 z-[9000] flex flex-col items-center pt-32 px-4"
+          className="fixed inset-0 z-[9000] flex flex-col items-center pt-24 sm:pt-32 px-4 pb-8 overflow-y-auto"
           style={{ background: 'rgba(0,0,0,0.95)', backdropFilter: 'blur(10px)' }}
           initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.3 }}
@@ -58,7 +58,7 @@ export default function SearchOverlay() {
             </div>
 
             {results.length > 0 ? (
-              <div className="mt-8 grid grid-cols-2 gap-4">
+              <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {results.map((p) => (
                   <Link key={p.id} href={`/shop/${p.slug}`} onClick={closeSearch} className="flex gap-4 group">
                     <div className="w-16 h-20 bg-deep flex-shrink-0 overflow-hidden">

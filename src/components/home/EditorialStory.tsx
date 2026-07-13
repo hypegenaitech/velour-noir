@@ -4,7 +4,7 @@ import Link from 'next/link';
 export default function EditorialStory() {
   return (
     <section className="bg-black py-24">
-      <div className="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
         <div className="relative aspect-[3/4] overflow-hidden">
           <Image
             src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=800&q=80"
@@ -15,7 +15,7 @@ export default function EditorialStory() {
         </div>
         <div>
           <span className="font-jost text-[11px] uppercase tracking-[0.2em] text-gold block mb-4">THE FOUNDER</span>
-          <h2 className="font-cormorant text-[56px] text-white uppercase tracking-[0.05em] font-light leading-tight mb-8">
+          <h2 className="font-cormorant text-[36px] sm:text-[44px] md:text-[56px] text-white uppercase tracking-[0.05em] font-light leading-tight mb-8">
             THE MOTHER<br />OF MAKEUP
           </h2>
           <p className="font-jost text-[14px] text-muted leading-relaxed mb-4">

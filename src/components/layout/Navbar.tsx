@@ -51,18 +51,18 @@ export default function Navbar() {
       </div>
 
       {/* Center logo */}
-      <div className="absolute left-1/2 -translate-x-1/2">
-        <Link href="/" className="font-cormorant text-[18px] tracking-[0.2em] md:text-[20px] md:tracking-[0.4em] text-white uppercase hover:text-platinum transition-colors whitespace-nowrap">
+      <div className="absolute left-1/2 -translate-x-1/2 px-2 max-w-[54%] sm:max-w-none">
+        <Link href="/" className="block font-cormorant text-[14px] tracking-[0.1em] sm:text-[18px] sm:tracking-[0.2em] md:text-[20px] md:tracking-[0.4em] text-white uppercase hover:text-platinum transition-colors whitespace-nowrap truncate text-center">
           VELOUR NOIR
         </Link>
       </div>
 
       {/* Right icons */}
-      <div className="flex items-center gap-5 pr-8 flex-1 justify-end">
+      <div className="flex items-center gap-3 sm:gap-5 pr-4 sm:pr-8 flex-1 justify-end">
         <button onClick={openSearch} className="text-platinum hover:text-gold transition-colors" aria-label="Search">
           <Search size={18} />
         </button>
-        <Link href="/wishlist" className="relative text-platinum hover:text-gold transition-colors" aria-label="Wishlist">
+        <Link href="/wishlist" className="relative hidden sm:inline-flex text-platinum hover:text-gold transition-colors" aria-label="Wishlist">
           <Heart size={18} />
           {mounted && wishCount > 0 && (
             <span className="absolute -top-2 -right-2 bg-gold text-black text-[9px] font-jost w-4 h-4 rounded-full flex items-center justify-center">
@@ -70,7 +70,7 @@ export default function Navbar() {
             </span>
           )}
         </Link>
-        <Link href="/account" className="text-platinum hover:text-gold transition-colors" aria-label="Account">
+        <Link href="/account" className="hidden sm:inline-flex text-platinum hover:text-gold transition-colors" aria-label="Account">
           <User size={18} />
         </Link>
         <button
@@ -85,7 +85,7 @@ export default function Navbar() {
             </span>
           )}
         </button>
-        <button onClick={openMobileMenu} aria-label="Open menu" className="lg:hidden text-platinum hover:text-gold transition-colors ml-2">
+        <button onClick={openMobileMenu} aria-label="Open menu" className="lg:hidden text-platinum hover:text-gold transition-colors ml-1 sm:ml-2">
           <Menu size={20} />
         </button>
       </div>

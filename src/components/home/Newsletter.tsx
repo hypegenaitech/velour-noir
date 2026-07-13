@@ -14,7 +14,7 @@ export default function Newsletter() {
 
   return (
     <section
-      className="w-full py-24 px-8 border-t border-gold/30 border-b border-gold/30"
+      className="w-full py-24 px-4 md:px-8 border-t border-gold/30 border-b border-gold/30"
       style={{ background: 'radial-gradient(ellipse at center, rgba(200,169,110,0.04) 0%, #000 70%)' }}
     >
       <div className="max-w-2xl mx-auto text-center">
@@ -27,15 +27,15 @@ export default function Newsletter() {
         {done ? (
           <p className="font-cormorant italic text-gold text-xl">Welcome to the Circle. Beauty awaits.</p>
         ) : (
-          <form onSubmit={submit} className="flex gap-0 max-w-md mx-auto">
+          <form onSubmit={submit} className="flex flex-col sm:flex-row gap-3 sm:gap-0 max-w-md mx-auto">
             <Input
               type="email"
               placeholder="YOUR EMAIL ADDRESS"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="flex-1 text-[12px] tracking-wider"
+              className="flex-1 min-w-0 text-[12px] tracking-wider"
             />
-            <Button type="submit" variant="gold" size="md" className="flex-shrink-0">
+            <Button type="submit" variant="gold" size="md" className="flex-shrink-0 w-full sm:w-auto">
               SUBSCRIBE
             </Button>
           </form>

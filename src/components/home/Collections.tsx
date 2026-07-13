@@ -9,7 +9,7 @@ const COLLECTIONS = [
 
 export default function Collections() {
   return (
-    <section className="bg-black py-24 px-8">
+    <section className="bg-black py-24 px-4 md:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-14">
           <h2 className="font-cormorant text-[48px] text-white uppercase tracking-[0.1em] font-light">COLLECTIONS</h2>
@@ -17,7 +17,7 @@ export default function Collections() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {COLLECTIONS.map((col) => (
-            <Link key={col.title} href={col.href} className="group relative overflow-hidden h-[500px] block">
+            <Link key={col.title} href={col.href} className="group relative overflow-hidden h-[380px] md:h-[500px] block">
               <Image
                 src={col.image}
                 alt={col.title}

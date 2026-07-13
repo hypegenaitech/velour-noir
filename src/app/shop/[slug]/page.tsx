@@ -47,9 +47,9 @@ export default function ProductPage({ params }: Props) {
 
   return (
     <div className="min-h-screen bg-black pt-[100px]">
-      <div className="max-w-7xl mx-auto px-8 py-12">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 py-12">
         {/* Breadcrumb */}
-        <nav className="flex items-center gap-2 mb-10 font-jost text-[11px] uppercase tracking-wider">
+        <nav className="flex items-center flex-wrap gap-2 mb-10 font-jost text-[11px] uppercase tracking-wider">
           <Link href="/" className="text-muted hover:text-gold transition-colors">HOME</Link>
           <span className="text-gold">/</span>
           <Link href={`/shop?category=${product.category}`} className="text-muted hover:text-gold transition-colors">{product.category.toUpperCase()}</Link>
@@ -57,7 +57,7 @@ export default function ProductPage({ params }: Props) {
           <span className="text-platinum">{product.subcategory.toUpperCase()}</span>
         </nav>
 
-        <div className="grid grid-cols-1 lg:grid-cols-[55%_45%] gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-[55%_45%] gap-8 lg:gap-16">
           {/* Gallery */}
           <ImageGallery images={product.images} name={product.name} />
 
@@ -71,7 +71,7 @@ export default function ProductPage({ params }: Props) {
             </div>
 
             <div>
-              <h1 className="font-cormorant font-light text-[48px] text-white uppercase tracking-[0.05em] leading-tight">{product.name}</h1>
+              <h1 className="font-cormorant font-light text-[32px] sm:text-[40px] md:text-[48px] text-white uppercase tracking-[0.05em] leading-tight">{product.name}</h1>
               <p className="font-cormorant italic text-gold text-[18px] mt-2">{product.tagline}</p>
             </div>
 

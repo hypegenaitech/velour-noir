@@ -1,6 +1,6 @@
 'use client';
 import Link from 'next/link';
-import { X, ChevronDown } from 'lucide-react';
+import { X, ChevronDown, Heart, User } from 'lucide-react';
 import { useState } from 'react';
 import { useUI } from '@/context/UIContext';
 import { AnimatePresence, motion } from 'framer-motion';
@@ -77,6 +77,22 @@ export default function MobileMenu() {
                 </div>
               ))}
             </nav>
+            <div className="flex sm:hidden items-center gap-6 px-6 py-5 border-t border-gold/20">
+              <Link
+                href="/wishlist"
+                onClick={closeMobileMenu}
+                className="flex items-center gap-2 font-jost text-[12px] uppercase tracking-[0.15em] text-platinum hover:text-gold transition-colors"
+              >
+                <Heart size={16} /> Wishlist
+              </Link>
+              <Link
+                href="/account"
+                onClick={closeMobileMenu}
+                className="flex items-center gap-2 font-jost text-[12px] uppercase tracking-[0.15em] text-platinum hover:text-gold transition-colors"
+              >
+                <User size={16} /> Account
+              </Link>
+            </div>
           </motion.div>
         </>
       )}

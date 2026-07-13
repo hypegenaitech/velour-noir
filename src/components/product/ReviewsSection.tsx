@@ -51,7 +51,7 @@ export default function ReviewsSection({ product }: Props) {
         ))}
       </div>
 
-      <div className="flex gap-4 mt-10">
+      <div className="flex flex-col sm:flex-row gap-4 mt-10">
         <button className="font-jost text-[11px] uppercase tracking-wider text-gold border border-gold/50 px-6 py-3 hover:bg-gold/10 transition-colors">
           WRITE A REVIEW
         </button>

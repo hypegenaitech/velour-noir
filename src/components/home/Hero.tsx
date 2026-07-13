@@ -1,6 +1,5 @@
 'use client';
 import { useEffect, useRef } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 import { btnGold, btnOutline } from '@/components/ui/Button';
 import gsap from 'gsap';
@@ -67,13 +66,25 @@ export default function Hero() {
     <section className="relative w-full h-screen overflow-hidden bg-black flex items-center">
       {/* Background */}
       <div className="absolute inset-0">
-        <Image
-          src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=1600&q=80"
-          alt="Hero"
-          fill
-          priority
-          className="object-cover object-center"
-        />
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          poster="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=1600&q=80"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+        >
+          <source
+            media="(max-width: 767px)"
+            src="https://videos.pexels.com/video-files/7291773/7291773-sd_960_540_25fps.mp4"
+            type="video/mp4"
+          />
+          <source
+            src="https://videos.pexels.com/video-files/7291773/7291773-hd_1920_1080_25fps.mp4"
+            type="video/mp4"
+          />
+        </video>
         <div
           className="absolute inset-0"
           style={{ background: 'linear-gradient(to right, rgba(0,0,0,0.88) 50%, rgba(0,0,0,0.22) 100%)' }}
